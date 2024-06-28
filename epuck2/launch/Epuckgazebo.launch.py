@@ -15,9 +15,9 @@ def generate_launch_description():
   package_name = 'epuck2'
   robot_name_in_model = 'Epuck2'
   cable_in_model="cable"
-  urdf_file_path = 'Epuck2.urdf'
+  urdf_file_path = 'models/urdf/Epuck2.urdf'
   sdf_model_path = 'models/cable_test/model.sdf'
-  world_file_path = 'worlds/Epuck2_world.world'
+  world_file_path = 'worlds/epuck2_world.world'
      
   # Pose where we want to spawn the robot
   spawn_x_val = '0.0'
@@ -135,17 +135,6 @@ def generate_launch_description():
                     '-z', spawn_z_val,
                     '-Y', spawn_yaw_val],
                     output='screen')
-    # Launch the robot
-  spawn_entity_cmd = Node(
-    package='gazebo_ros', 
-    executable='spawn_entity.py',
-    arguments=['-entity', cable_in_model, 
-               '-file', sdf_model,
-                  '-x', spawn_x_val,
-                  '-y', spawn_y_val,
-                  '-z', spawn_z_val,
-                  '-Y', spawn_yaw_val],
-                  output='screen')
  
   # Create the launch description and populate
   ld = LaunchDescription()

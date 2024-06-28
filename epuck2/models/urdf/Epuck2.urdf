@@ -9,7 +9,7 @@
   <gazebo>
     <plugin filename="libgazebo_ros_diff_drive.so" name="two_wheeled_robot_diff_drive">
       <ros>
-        <!-- <namespace>/Epuck2</namespace> -->
+        <namespace>/Epuck2</namespace>
       </ros>
       <update_rate>100</update_rate>
       <!-- wheels -->
