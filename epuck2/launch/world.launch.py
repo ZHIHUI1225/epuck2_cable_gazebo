@@ -13,7 +13,7 @@ from launch_ros.substitutions import FindPackageShare
 def generate_launch_description():
 
     robot_name = 'epuck2'
-    world_file_name = 'Epuck2_world.world'
+    world_file_name = 'epuck2_world.world'
 
     # full  path to urdf and world file
     

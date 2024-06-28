@@ -126,14 +126,15 @@
     <rpyOffsets>0 0 0</rpyOffsets>
   </plugin>
 </gazebo>-->
-  <!-- ros_control plugin -->
+  <!-- ros_control plugin
   <gazebo>
-    <plugin filename="libgazebo_ros_control.so" name="gazebo_ros_control">
+    <plugin name="gazebo_ros_control"
+            filename="libgazebo_ros_control.so">
       <robotNamespace>/epuck</robotNamespace>
       <robotParam>/robot_description</robotParam>
       <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
     </plugin>
-  </gazebo>
+  </gazebo> -->
   <!--***************************ros control**********************
 <gazebo>
   <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
