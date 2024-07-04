@@ -56,9 +56,14 @@ cmake_minimum_required(VERSION 3.5)
    install(DIRECTORY models
      DESTINATION share/${PROJECT_NAME})
      
+     install(DIRECTORY meshes
+     DESTINATION share/${PROJECT_NAME})
+     
+     
      install(DIRECTORY launch
   DESTINATION share/${PROJECT_NAME})
-  install(
+
+    install(
   PROGRAMS
   launch/spawn_box_bot_v2.py
   DESTINATION lib/${PROJECT_NAME})

@@ -1,0 +1,851 @@
+<?xml version="1.0" ?>
+<sdf version="1.7">
+  <model name="cable">
+     
+      <!-- <joint name="joint_world" type="revolute">
+      <child>sphere_01</child>
+      <parent>epuck2::robot_footprint</parent>
+      <axis>
+        <xyz>0.00 0.00 0.000</xyz>
+        <dynamics>
+          <damping>10.000000</damping>
+          <friction>0.000000</friction>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+    </joint> -->
+      <!-- <link name="plug">
+      <pose>0.000000 0.000000 0.000000 0.000000 1.570796 0.000000</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <mass>0.10000</mass>
+        <inertia>
+          <ixx>0.010000</ixx>
+          <ixy>0.000000</ixy>
+          <ixz>0.000000</ixz>
+          <iyy>0.010000</iyy>
+          <iyz>0.000000</iyz>
+          <izz>0.010000</izz>
+        </inertia>
+      </inertial>
+      <collision name="plug_collision">
+        <pose>-0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.007500</radius>
+            <length>0.1</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="plug_vis">
+        <pose>-0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.007500</radius>
+            <length>0.1</length>
+          </cylinder>
+        </geometry>
+      </visual>
+      <velocity_decay />
+    </link> -->
+
+    <link name="sphere_01">
+      <gravity>false</gravity>
+      <pose>0.0500000 0.000000 0.000000 0.000000 -0.000000 0.000000</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000</pose>
+        <mass>0.050000</mass>
+        <inertia>
+          <ixx>0.010000</ixx>
+          <ixy>0.000000</ixy>
+          <ixz>0.000000</ixz>
+          <iyy>0.010000</iyy>
+          <iyz>0.000000</iyz>
+          <izz>0.010000</izz>
+        </inertia>
+      </inertial>
+      <collision name="sphere_01_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000</pose>
+        <geometry>
+          <sphere>
+            <radius>0.007500</radius>
+          </sphere>
+        </geometry>
+      </collision>
+      <visual name="sphere_01_vis">
+        <pose>0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000</pose>
+        <geometry>
+          <sphere>
+            <radius>0.007500</radius>
+          </sphere>
+        </geometry>
+      </visual>
+      <velocity_decay />
+    </link>
+    <!-- <joint name="joint_plug" type="fixed">
+      <child>plug</child>
+      <parent>sphere_01</parent>
+      <axis>
+        <xyz>0.000000 0.000000 1.000000</xyz>
+        <limit>
+          <lower>0.00000</lower>
+          <upper>0.01000</upper>
+        </limit>
+        <dynamics>
+          <damping>10.000000</damping>
+          <friction>0.000000</friction>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+    </joint> -->
+    <link name="link_01">
+      <pose>0.050000 0.000000 0.000000 0.000000 -0.000000 0.000000</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000</pose>
+        <mass>0.200000</mass>
+        <inertia>
+          <ixx>0.010000</ixx>
+          <ixy>0.000000</ixy>
+          <ixz>0.000000</ixz>
+          <iyy>0.010000</iyy>
+          <iyz>0.000000</iyz>
+          <izz>0.010000</izz>
+        </inertia>
+      </inertial>
+      <collision name="link_01_collision">
+        <pose>0.025000 0.000000 0.000000 0.000000 1.570790 0.000000</pose>
+        <geometry>
+          <cylinder>
+            <length>0.050000</length>
+            <radius>0.007500</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="link_01_vis">
+        <pose>0.025000 0.000000 0.000000 0.000000 1.570790 0.000000</pose>
+        <geometry>
+          <cylinder>
+            <length>0.050000</length>
+            <radius>0.007500</radius>
+          </cylinder>
+        </geometry>
+      </visual>
+      <velocity_decay />
+    </link>
+    <joint name="joint_01_2" type="revolute">
+      <child>link_01</child>
+      <parent>sphere_01</parent>
+      <axis>
+        <xyz>0.000000 0.000000 1.000000</xyz>
+        <limit>
+          <lower>-1</lower>
+          <upper>1</upper>
+        </limit>
+        <dynamics>
+         <damping>0.001</damping>
+          <friction>0.000010</friction>
+	  <spring_stiffness>0.00265</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name="sphere_02">
+      <gravity>false</gravity>
+      <pose>0.100000 0.000000 0.000000 0.000000 -0.000000 0.000000</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000</pose>
+        <mass>0.050000</mass>
+        <inertia>
+          <ixx>0.010000</ixx>
+          <ixy>0.000000</ixy>
+          <ixz>0.000000</ixz>
+          <iyy>0.010000</iyy>
+          <iyz>0.000000</iyz>
+          <izz>0.010000</izz>
+        </inertia>
+      </inertial>
+      <collision name="sphere_02_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000</pose>
+        <geometry>
+          <sphere>
+            <radius>0.007500</radius>
+          </sphere>
+        </geometry>
+      </collision>
+      <visual name="sphere_02_vis">
+        <pose>0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000</pose>
+        <geometry>
+          <sphere>
+            <radius>0.007500</radius>
+          </sphere>
+        </geometry>
+      </visual>
+      <velocity_decay />
+    </link>
+    <joint name="joint_02_1" type="fixed">
+      <child>sphere_02</child>
+      <parent>link_01</parent>
+      <axis>
+        <xyz>0.000000 0.000000 1.000000</xyz>
+        <limit>
+          <lower>-0.1000</lower>
+          <upper>0.1000</upper>
+        </limit>
+        <dynamics>
+          <damping>0</damping>
+          <friction>0.000000</friction>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name="link_02">
+
+      <pose>0.100000 0.000000 0.000000 0.000000 -0.000000 0.000000</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000</pose>
+        <mass>0.200000</mass>
+        <inertia>
+          <ixx>0.010000</ixx>
+          <ixy>0.000000</ixy>
+          <ixz>0.000000</ixz>
+          <iyy>0.010000</iyy>
+          <iyz>0.000000</iyz>
+          <izz>0.010000</izz>
+        </inertia>
+      </inertial>
+      <collision name="link_02_collision">
+        <pose>0.025000 0.000000 0.000000 0.000000 1.570790 0.000000</pose>
+        <geometry>
+          <cylinder>
+            <length>0.050000</length>
+            <radius>0.007500</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="link_02_vis">
+        <pose>0.025000 0.000000 0.000000 0.000000 1.570790 0.000000</pose>
+        <geometry>
+          <cylinder>
+            <length>0.050000</length>
+            <radius>0.007500</radius>
+          </cylinder>
+        </geometry>
+      </visual>
+      <velocity_decay />
+    </link>
+    <joint name="joint_02_2" type="revolute">
+      <child>link_02</child>
+      <parent>sphere_02</parent>
+      <axis>
+        <xyz>0.000000 0.000000 1.000000</xyz>
+        <dynamics>
+          <damping>0.001</damping>
+          <friction>0.0000100</friction>
+          <spring_stiffness>0.00239</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name="sphere_03">
+      <gravity>false</gravity>
+      <pose>0.150000 0.000000 0.000000 0.000000 -0.000000 0.000000</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000</pose>
+        <mass>0.050000</mass>
+        <inertia>
+          <ixx>0.010000</ixx>
+          <ixy>0.000000</ixy>
+          <ixz>0.000000</ixz>
+          <iyy>0.010000</iyy>
+          <iyz>0.000000</iyz>
+          <izz>0.010000</izz>
+        </inertia>
+      </inertial>
+      <collision name="sphere_03_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000</pose>
+        <geometry>
+          <sphere>
+            <radius>0.007500</radius>
+          </sphere>
+        </geometry>
+      </collision>
+      <visual name="sphere_03_vis">
+        <pose>0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000</pose>
+        <geometry>
+          <sphere>
+            <radius>0.007500</radius>
+          </sphere>
+        </geometry>
+      </visual>
+      <velocity_decay />
+    </link>
+    <joint name="joint_03_1" type="fixed">
+      <child>sphere_03</child>
+      <parent>link_02</parent>
+      <axis>
+        <xyz>0.000000 0.000000 1.000000</xyz>
+        <dynamics>
+          <damping>0</damping>
+          <friction>0.000000</friction>
+	  <spring_stiffness>0.002738</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name="link_03">
+   
+      <pose>0.150000 0.000000 0.000000 0.000000 -0.000000 0.000000</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000</pose>
+        <mass>0.200000</mass>
+        <inertia>
+          <ixx>0.010000</ixx>
+          <ixy>0.000000</ixy>
+          <ixz>0.000000</ixz>
+          <iyy>0.010000</iyy>
+          <iyz>0.000000</iyz>
+          <izz>0.010000</izz>
+        </inertia>
+      </inertial>
+      <collision name="link_03_collision">
+        <pose>0.025000 0.000000 0.000000 0.000000 1.570790 0.000000</pose>
+        <geometry>
+          <cylinder>
+            <length>0.050000</length>
+            <radius>0.007500</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="link_03_vis">
+        <pose>0.025000 0.000000 0.000000 0.000000 1.570790 0.000000</pose>
+        <geometry>
+          <cylinder>
+            <length>0.050000</length>
+            <radius>0.007500</radius>
+          </cylinder>
+        </geometry>
+      </visual>
+      <velocity_decay />
+    </link>
+    <joint name="joint_03_2" type="revolute">
+      <child>link_03</child>
+      <parent>sphere_03</parent>
+      <axis>
+        <xyz>0.000000 0.000000 1.000000</xyz>
+        <dynamics>
+         <damping>0.001</damping>
+          <friction>0.0000100</friction>
+	  <spring_stiffness>0.00265</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name="sphere_04">
+      <gravity>false</gravity>
+      <pose>0.200000 0.000000 0.000000 0.000000 -0.000000 0.000000</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000</pose>
+        <mass>0.050000</mass>
+        <inertia>
+          <ixx>0.010000</ixx>
+          <ixy>0.000000</ixy>
+          <ixz>0.000000</ixz>
+          <iyy>0.010000</iyy>
+          <iyz>0.000000</iyz>
+          <izz>0.010000</izz>
+        </inertia>
+      </inertial>
+      <collision name="sphere_04_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000</pose>
+        <geometry>
+          <sphere>
+            <radius>0.007500</radius>
+          </sphere>
+        </geometry>
+      </collision>
+      <visual name="sphere_04_vis">
+        <pose>0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000</pose>
+        <geometry>
+          <sphere>
+            <radius>0.007500</radius>
+          </sphere>
+        </geometry>
+      </visual>
+      <velocity_decay />
+    </link>
+    <joint name="joint_04_1" type="fixed">
+      <child>sphere_04</child>
+      <parent>link_03</parent>
+      <axis>
+        <xyz>0.000000 0.000000 1.000000</xyz>
+        <limit>
+          <lower>-1</lower>
+          <upper>1</upper>
+        </limit>
+        <dynamics>
+          <damping>0.000000</damping>
+          <friction>0.000000</friction>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name="link_04">
+      <pose>0.200000 0.000000 0.000000 0.000000 -0.000000 0.000000</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000</pose>
+        <mass>0.200000</mass>
+        <inertia>
+          <ixx>0.010000</ixx>
+          <ixy>0.000000</ixy>
+          <ixz>0.000000</ixz>
+          <iyy>0.010000</iyy>
+          <iyz>0.000000</iyz>
+          <izz>0.010000</izz>
+        </inertia>
+      </inertial>
+      <collision name="link_04_collision">
+        <pose>0.025000 0.000000 0.000000 0.000000 1.570790 0.000000</pose>
+        <geometry>
+          <cylinder>
+            <length>0.050000</length>
+            <radius>0.007500</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="link_04_vis">
+        <pose>0.025000 0.000000 0.000000 0.000000 1.570790 0.000000</pose>
+        <geometry>
+          <cylinder>
+            <length>0.050000</length>
+            <radius>0.007500</radius>
+          </cylinder>
+        </geometry>
+      </visual>
+      <velocity_decay />
+    </link>
+    <joint name="joint_04_2" type="revolute">
+      <child>link_04</child>
+      <parent>sphere_04</parent>
+      <axis>
+        <xyz>0.000000 0.000000 1.000000</xyz>
+        <dynamics>
+          <damping>0.001</damping>
+          <friction>0.0000100</friction>
+	  <spring_stiffness>0.00238</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name="sphere_05">
+      <gravity>false</gravity>
+      <pose>0.250000 0.000000 0.000000 0.000000 -0.000000 0.000000</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000</pose>
+        <mass>0.050000</mass>
+        <inertia>
+          <ixx>0.010000</ixx>
+          <ixy>0.000000</ixy>
+          <ixz>0.000000</ixz>
+          <iyy>0.010000</iyy>
+          <iyz>0.000000</iyz>
+          <izz>0.010000</izz>
+        </inertia>
+      </inertial>
+      <collision name="sphere_05_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000</pose>
+        <geometry>
+          <sphere>
+            <radius>0.007500</radius>
+          </sphere>
+        </geometry>
+      </collision>
+      <visual name="sphere_05_vis">
+        <pose>0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000</pose>
+        <geometry>
+          <sphere>
+            <radius>0.007500</radius>
+          </sphere>
+        </geometry>
+      </visual>
+      <velocity_decay />
+    </link>
+    <joint name="joint_05_1" type="fixed">
+      <child>sphere_05</child>
+      <parent>link_04</parent>
+      <axis>
+        <xyz>0.000000 0.000000 1.000000</xyz>
+        <limit>
+          <lower>-1</lower>
+          <upper>1</upper>
+        </limit>
+        <dynamics>
+          <damping>0.000000</damping>
+          <friction>0.000000</friction>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name="link_05">
+      <pose>0.250000 0.000000 0.000000 0.000000 -0.000000 0.000000</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000</pose>
+        <mass>0.20000</mass>
+        <inertia>
+          <ixx>0.010000</ixx>
+          <ixy>0.000000</ixy>
+          <ixz>0.000000</ixz>
+          <iyy>0.010000</iyy>
+          <iyz>0.000000</iyz>
+          <izz>0.010000</izz>
+        </inertia>
+      </inertial>
+      <collision name="link_05_collision">
+        <pose>0.025000 0.000000 0.000000 0.000000 1.570790 0.000000</pose>
+        <geometry>
+          <cylinder>
+            <length>0.050000</length>
+            <radius>0.007500</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="link_05_vis">
+        <pose>0.025000 0.000000 0.000000 0.000000 1.570790 0.000000</pose>
+        <geometry>
+          <cylinder>
+            <length>0.050000</length>
+            <radius>0.007500</radius>
+          </cylinder>
+        </geometry>
+      </visual>
+      <velocity_decay />
+    </link>
+    <joint name="joint_05_2" type="revolute">
+      <child>link_05</child>
+      <parent>sphere_05</parent>
+      <axis>
+        <xyz>0.000000 0.000000 1.000000</xyz>
+        <dynamics>
+          <damping>0.001</damping>
+          <friction>0.0000100</friction>
+	  <spring_stiffness>0.00238</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name="sphere_06">
+      <gravity>false</gravity>
+      <pose>0.300000 0.000000 0.000000 0.000000 -0.000000 0.000000</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000</pose>
+        <mass>0.050000</mass>
+        <inertia>
+          <ixx>0.010000</ixx>
+          <ixy>0.000000</ixy>
+          <ixz>0.000000</ixz>
+          <iyy>0.010000</iyy>
+          <iyz>0.000000</iyz>
+          <izz>0.010000</izz>
+        </inertia>
+      </inertial>
+      <collision name="sphere_06_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000</pose>
+        <geometry>
+          <sphere>
+            <radius>0.007500</radius>
+          </sphere>
+        </geometry>
+      </collision>
+      <visual name="sphere_06_vis">
+        <pose>0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000</pose>
+        <geometry>
+          <sphere>
+            <radius>0.007500</radius>
+          </sphere>
+        </geometry>
+      </visual>
+      <velocity_decay />
+    </link>
+    <joint name="joint_06_1" type="fixed">
+      <child>sphere_06</child>
+      <parent>link_05</parent>
+      <axis>
+        <xyz>0.000000 0.000000 1.000000</xyz>
+        <limit>
+          <lower>-1</lower>
+          <upper>1</upper>
+        </limit>
+        <dynamics>
+          <damping>0.000000</damping>
+          <friction>0.000000</friction>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name="link_06">
+      <pose>0.300000 0.000000 0.000000 0.000000 -0.000000 0.000000</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000</pose>
+        <mass>0.200000</mass>
+        <inertia>
+          <ixx>0.010000</ixx>
+          <ixy>0.000000</ixy>
+          <ixz>0.000000</ixz>
+          <iyy>0.010000</iyy>
+          <iyz>0.000000</iyz>
+          <izz>0.010000</izz>
+        </inertia>
+      </inertial>
+      <collision name="link_06_collision">
+        <pose>0.025000 0.000000 0.000000 0.000000 1.570790 0.000000</pose>
+        <geometry>
+          <cylinder>
+            <length>0.050000</length>
+            <radius>0.007500</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="link_06_vis">
+        <pose>0.025000 0.000000 0.000000 0.000000 1.570790 0.000000</pose>
+        <geometry>
+          <cylinder>
+            <length>0.050000</length>
+            <radius>0.007500</radius>
+          </cylinder>
+        </geometry>
+      </visual>
+      <velocity_decay />
+    </link>
+    <joint name="joint_06_2" type="revolute">
+      <child>link_06</child>
+      <parent>sphere_06</parent>
+      <axis>
+        <xyz>0.000000 0.000000 1.000000</xyz>
+        <limit>
+          <lower>-1</lower>
+          <upper>1</upper>
+        </limit>
+        <dynamics>
+          <damping>0.001</damping>
+          <friction>0.0000100</friction>
+	  <spring_stiffness>0.002738</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name="sphere_07">
+      <gravity>false</gravity>
+      <pose>0.350000 0.000000 0.000000 0.000000 -0.000000 0.000000</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000</pose>
+        <mass>0.050000</mass>
+        <inertia>
+          <ixx>0.010000</ixx>
+          <ixy>0.000000</ixy>
+          <ixz>0.000000</ixz>
+          <iyy>0.010000</iyy>
+          <iyz>0.000000</iyz>
+          <izz>0.010000</izz>
+        </inertia>
+      </inertial>
+      <collision name="sphere_07_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000</pose>
+        <geometry>
+          <sphere>
+            <radius>0.007500</radius>
+          </sphere>
+        </geometry>
+      </collision>
+      <visual name="sphere_07_vis">
+        <pose>0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000</pose>
+        <geometry>
+          <sphere>
+            <radius>0.007500</radius>
+          </sphere>
+        </geometry>
+      </visual>
+      <velocity_decay />
+    </link>
+    <joint name="joint_07_1" type="fixed">
+      <child>sphere_07</child>
+      <parent>link_06</parent>
+      <axis>
+        <xyz>0.000000 0.000000 1.000000</xyz>
+        <limit>
+          <lower>-1</lower>
+          <upper>1</upper>
+        </limit>
+        <dynamics>
+          <damping>0.000000</damping>
+          <friction>0.000000</friction>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name="link_07">
+
+      <pose>0.350000 0.000000 0.000000 0.000000 -0.000000 0.000000</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000</pose>
+        <mass>0.200000</mass>
+        <inertia>
+          <ixx>0.010000</ixx>
+          <ixy>0.000000</ixy>
+          <ixz>0.000000</ixz>
+          <iyy>0.010000</iyy>
+          <iyz>0.000000</iyz>
+          <izz>0.010000</izz>
+        </inertia>
+      </inertial>
+      <collision name="link_07_collision">
+        <pose>0.025000 0.000000 0.000000 0.000000 1.570790 0.000000</pose>
+        <geometry>
+          <cylinder>
+            <length>0.050000</length>
+            <radius>0.007500</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="link_07_vis">
+        <pose>0.025000 0.000000 0.000000 0.000000 1.570790 0.000000</pose>
+        <geometry>
+          <cylinder>
+            <length>0.050000</length>
+            <radius>0.007500</radius>
+          </cylinder>
+        </geometry>
+      </visual>
+      <velocity_decay />
+    </link>
+    <joint name="joint_07_2" type="revolute">
+      <child>link_07</child>
+      <parent>sphere_07</parent>
+      <axis>
+        <xyz>0.000000 0.000000 1.000000</xyz>
+        <limit>
+          <lower>-1</lower>
+          <upper>1</upper>
+        </limit>
+        <dynamics>
+         <damping>0.001</damping>
+          <friction>0.0000100</friction>
+	  <spring_stiffness>0.002038</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+    </joint>   
+     <link name="sphere_08">
+      <gravity>false</gravity>
+      <pose>0.400000 0.000000 0.000000 0.000000 -0.000000 0.000000</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000</pose>
+        <mass>0.0500000</mass>
+        <inertia>
+          <ixx>0.010000</ixx>
+          <ixy>0.000000</ixy>
+          <ixz>0.000000</ixz>
+          <iyy>0.010000</iyy>
+          <iyz>0.000000</iyz>
+          <izz>0.010000</izz>
+        </inertia>
+      </inertial>
+      <collision name="sphere_08_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000</pose>
+        <geometry>
+          <sphere>
+            <radius>0.007500</radius>
+          </sphere>
+        </geometry>
+      </collision>
+      <visual name="sphere_08_vis">
+        <pose>0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000</pose>
+        <geometry>
+          <sphere>
+            <radius>0.007500</radius>
+          </sphere>
+        </geometry>
+      </visual>
+      <velocity_decay />
+    </link>
+    <joint name="joint_08_1" type="fixed">
+      <child>sphere_08</child>
+      <parent>link_07</parent>
+      <axis>
+        <xyz>0.000000 0.000000 1.000000</xyz>
+        <limit>
+          <lower>-1</lower>
+          <upper>1</upper>
+        </limit>
+        <dynamics>
+          <damping>10.000000</damping>
+          <friction>0.000000</friction>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+    </joint>
+<!-- 
+    <link name="link_08">
+      <pose>0.400000 0.000000 0.000000 0.000000 -0.000000 0.000000</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 0.000000 -0.000000 0.000000</pose>
+        <mass>0.0100000</mass>
+        <inertia>
+          <ixx>0.010000</ixx>
+          <ixy>0.000000</ixy>
+          <ixz>0.000000</ixz>
+          <iyy>0.010000</iyy>
+          <iyz>0.000000</iyz>
+          <izz>0.010000</izz>
+        </inertia>
+      </inertial>
+      <collision name="link_08_collision">
+        <pose>0.025000 0.000000 0.000000 0.000000 1.570790 0.000000</pose>
+        <geometry>
+          <cylinder>
+            <length>0.050000</length>
+            <radius>0.007500</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="link_08_vis">
+        <pose>0.025000 0.000000 0.000000 0.000000 1.570790 0.000000</pose>
+        <geometry>
+          <cylinder>
+            <length>0.050000</length>
+            <radius>0.007500</radius>
+          </cylinder>
+        </geometry>
+      </visual>
+      <velocity_decay />
+    </link> -->
+     <!-- <joint name="joint_08_2" type="revolute"> 
+      <child>link_08</child>
+      <parent>sphere_08</parent>
+      <axis>
+        <xyz>0.000000 0.000000 1.000000</xyz>
+        <limit>
+          <lower>-0.500000</lower>
+          <upper>0.00000</upper>
+        </limit>
+        <dynamics>
+          <damping>10.000000</damping>
+          <friction>0.000000</friction>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+    </joint>  -->
+    <!-- <joint name="joint_end" type="fixed">
+      <child>sphere_08</child>
+      <parent>world</parent>
+      <axis>
+        <xyz>0.00000 0.000000 1.00000</xyz>
+        <dynamics>
+          <damping>10.000000</damping>
+          <friction>0.000000</friction>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+    </joint> -->
+
+
+  </model>
+</sdf>

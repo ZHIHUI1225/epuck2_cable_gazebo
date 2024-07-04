@@ -11,8 +11,18 @@
 
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
+  
+  <exec_depend>gazebo_ros</exec_depend>
+  <exec_depend>joint_state_publisher</exec_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>xacro</exec_depend>
+  <exec_depend>ros_gz_bridge</exec_depend>
+ 
 
   <export>
     <build_type>ament_cmake</build_type>
+    <gazebo_ros plugin_path="\${prefix}/lib" />
+    <gazebo_ros gazebo_media_path="\${prefix}/share" />
+    <gazebo_ros gazebo_model_path="\${prefix}//share/epuck2/models" />
   </export>
 </package>

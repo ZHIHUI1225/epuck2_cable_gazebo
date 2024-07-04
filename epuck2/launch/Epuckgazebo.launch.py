@@ -13,10 +13,9 @@ def generate_launch_description():
   # Constants for paths to different files and folders
   gazebo_models_path = 'models'
   package_name = 'epuck2'
-  robot_name_in_model = 'Epuck2'
-  cable_in_model="cable"
-  urdf_file_path = 'models/urdf/Epuck2.urdf'
-  sdf_model_path = 'models/cable_test/model.sdf'
+  robot_name_in_model = 'epuck2'
+  urdf_file_path = 'models/urdf/bocbot.urdf'
+  sdf_model_path = 'models/cable_test/model_test.sdf'
   world_file_path = 'worlds/epuck2_world.world'
      
   # Pose where we want to spawn the robot

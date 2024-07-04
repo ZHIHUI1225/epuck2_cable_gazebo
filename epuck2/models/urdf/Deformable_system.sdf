@@ -1,0 +1,60 @@
+<?xml version="1.0" ?>
+<sdf version="1.7" xmlns:experimental="http://sdformat.org/schemas/experimental">
+<model name="deformble system">
+  <include>
+    <uri>model://urdf/cable</uri>
+    <name>cable</name>
+    <!-- <experimental:params>
+      <visual element_id="link_01::link_01_vis" action="add" > 
+          <material>
+            <ambient>0 1 0 1</ambient>
+        </material>
+        <transparency action="add">0.5</transparency>
+      </visual>
+    </experimental:params> -->
+    <pose>0 0 0.005 0 0 0 0</pose>
+  </include>
+  <include>
+    <uri>model://urdf/agent1</uri>
+    <name>agent1</name>
+    <!-- <experimental:params>
+      <plugin element_id="two_wheeled_robot_diff_drive" action="add" > 
+        <ros>
+          <namespace>/agent1</namespace>
+        </ros>
+      </plugin>
+      
+    </experimental:params> -->
+    <pose>0.05 0 -0.07596 0 0 0 0</pose>
+  </include>
+   <include>
+    <uri>model://urdf/agent2</uri>
+    <name>agent2</name>
+    <pose>0.4 0 -0.07596 0 0 0 0</pose>
+  </include>
+  <joint name="joint_agent1" type="revolute">
+    <child>cable::sphere_01</child>
+    <parent>agent1::robot_footprint</parent>
+    <axis>
+      <xyz>0.00 0.00 1.000</xyz>
+      <dynamics>
+        <damping>0.000000</damping>
+        <friction>0.000000</friction>
+      </dynamics>
+      <use_parent_model_frame>true</use_parent_model_frame>
+    </axis>
+    </joint>
+    <joint name="joint_agent2" type="revolute">
+      <child>cable::sphere_08</child>
+      <parent>agent2::robot_footprint</parent>
+      <axis>
+        <xyz>0.00 0.00 1.000</xyz>
+        <dynamics>
+          <damping>0.000000</damping>
+          <friction>0.000000</friction>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+    </joint>
+  </model>
+</sdf>

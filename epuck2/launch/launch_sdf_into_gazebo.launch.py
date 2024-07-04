@@ -14,7 +14,8 @@ def generate_launch_description():
   gazebo_models_path = 'models'
   package_name = 'epuck2'
   robot_name_in_model = 'cable'
-  sdf_model_path = 'models/cable_test/model.sdf'
+  sdf_model_path = 'models/urdf/Deformable_system.sdf'
+  # sdf_model_path = 'models/cable_test/model.sdf'
   world_file_path = 'worlds/epuck2_world.world'
      
   # Pose where we want to spawn the robot
