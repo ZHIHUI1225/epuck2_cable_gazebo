@@ -3,8 +3,10 @@ ubuntu 20.04 + ros2 foxy + gazebo 11
 workspace: Epuck2_ws
 package: epuck2
 # main folders:
-## meshes: the description of the epuck2
-## worlds: empty world and world with walls
+## meshes:
+the description of the epuck2
+## worlds: 
+empty world and world with walls
 ## models: 
 cable_test(cable model from changpang), urdf(ours)
 ### sdf models: 
